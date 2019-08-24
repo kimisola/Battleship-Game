@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html>
+  <head>
+   <title> 戰艦遊戲 </title>
+    
+   </head>
+    <body>
+        <script>
+            var location1=0;
+            var location2=1;
+            var location3=2;
+            
+            var guess;
+            var hits=0;
+            var guesses=0;
+            
+            var isSunk=false;
+            
+            while (isSunk == false){
+                guess = prompt("射擊!! (請輸入0-6的數字一碼)");
+                if (guess < 0 || guess > 6 ){
+                   alert("請輸入一個有效的數字!")
+                }
+                   else {
+                        guesses = guesses+1;
+                       
+                        if (guess == location1 || guess == location2 || guess == location3) {
+                            alert("HIT!!")
+                            hits = hits+1;
+                            if (hits == 3){
+                                isSunk = true;
+                                alert("You sank my battleship!!")
+                            }
+                        }
+                            else{
+                                alert("MISS!!")
+                    }
+                }
+            }
+                
+            var stats = "你猜了 " + guesses + " 次變擊沉了戰艦，" + "這意味著你的射擊準確率為 " + (3/guesses);    
+            alert(stats);
+                
+        
+        </script>
+    
+    </body>
+
+
+
+</html>
