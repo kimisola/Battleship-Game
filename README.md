@@ -1,1 +1,1 @@
-# kimisola.github.io
+# Battleship game
